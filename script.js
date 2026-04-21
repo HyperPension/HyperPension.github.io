@@ -183,7 +183,6 @@ const pageEls = [...document.querySelectorAll("[data-page]")];
 const tabEls = [...document.querySelectorAll(".tab-button")];
 const archiveGrid = document.querySelector(".archive-grid");
 const stickersEl = document.querySelector(".stickers");
-const cursorEl = document.querySelector(".cursor-orbit");
 const backButton = document.querySelector(".back-button");
 
 function createImage(project, className = "") {
@@ -422,11 +421,6 @@ function enableStickerDrag(el) {
 }
 
 function bindEvents() {
-  document.addEventListener("mousemove", (event) => {
-    cursorEl.style.left = `${event.clientX}px`;
-    cursorEl.style.top = `${event.clientY}px`;
-  });
-
   tabEls.forEach((tab) => {
     tab.addEventListener("click", () => {
       if (tab.dataset.external) {
