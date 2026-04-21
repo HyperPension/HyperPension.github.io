@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HYPERPENSION Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="cursor-orbit" aria-hidden="true">
+      <img class="cursor-earth" src="./assets/earth.png" alt="" />
+    </div>
+
+    <header class="top-bar" data-name="상단 바">
+      <a class="brand" href="#archive" aria-label="HYPERPENSION home">
+        <img
+          class="brand-logo"
+          src="./작품/로고.png"
+          alt="HYPERPENSION logo"
+        />
+      </a>
+
+      <nav class="tabs" aria-label="Primary">
+        <button class="tab-button" data-route="info"></button>
+        <button class="tab-button" data-route="archive"></button>
+        <button class="tab-button" data-route="typography"></button>
+        <button class="tab-button" data-external="instagram"></button>
+        <button class="tab-button" data-external="fontsInUse"></button>
+      </nav>
+
+      <div class="mail-menu">
+        <button class="tab-button" data-external="mailMe"></button>
+        <div class="mail-card">
+          <a
+            class="mail-link"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=Check.in@Hyperpension.kr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Check.in@Hyperpension.kr
+          </a>
+        </div>
+      </div>
+
+    </header>
+
+    <main class="site-shell">
+      <section class="page page-info" data-page="info"></section>
+
+      <section class="page page-archive active" data-page="archive">
+        <div class="archive-intro">
+          <p class="eyebrow" data-i18n="archiveEyebrow"></p>
+          <p class="archive-caption" data-i18n="archiveCaption"></p>
+        </div>
+        <section class="archive-grid" aria-label="Archive projects"></section>
+      </section>
+
+      <section class="page page-typography" data-page="typography"></section>
+
+      <section class="page page-detail" data-page="detail">
+        <button class="back-button" type="button"></button>
+        <article class="detail-card">
+          <div class="detail-media-wrap">
+            <div class="detail-media"></div>
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow" data-detail="category"></p>
+            <h1 data-detail="title"></h1>
+            <p class="detail-meta" data-detail="meta"></p>
+            <p class="detail-description" data-detail="description"></p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="stickers" aria-label="Draggable stickers"></section>
+      <p class="footer-note" data-i18n="footerNote"></p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
